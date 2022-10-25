@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="images\bezier-modified.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezier curve</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 style=" text-decoration: underline overline; text-underline-offset: 0.7rem;"> BEZIER CURVE </h1>
+    </div>
+    <div class="theory">
+        <h2 style="text-decoration: underline;text-underline-offset: 0.7rem; color: #ffc000"> Theory:</h2>
+        <div class="content">
+            <h3> ▶ A Bezier curve is a mathematically defined curve used in two-dimensional
+                graphic applications. The curve is defined by four points: the initial position and the terminating
+                position (which are called "anchors") and two separate middle
+                points (which are called "handles").
+            </h3>
+
+            <h3>▶ Bezier curve was first invented by Pierre Bezier. Due to its nice properties, Bezier curves are widely
+                used
+                in
+                engineering designs and CAD packages.
+            </h3>
+            <h3>
+                ▶ The curve is specified by a set of control points. Position of control points controls the shape of
+                the
+                curve.
+                Fitting a
+                single curve of the higher degree to all the control points is difficult. Normally, the big curve is
+                approximated by
+                joining piecewise polynomials of lower degree, which approximates few control points only.
+            </h3>
+            <h3>
+                ▶ Local control: Repositioning one control point changes the entire curve.
+            </h3>
+            <h3>
+                ▶ Global control: Repositioning one control point does changes the entire curve.
+            </h3>
+            <h3>
+                ▶ With cubic polynomials, Bezier curve can approximate any number of control points. In the Bezier
+                curve,
+                the
+                degree of
+                polynomial depends on a number of control points used to generate curve segment.
+            </h3>
+            <h3>
+                ▶ In the Bezier curve, the degree of the polynomial is always one less than a number of control points.
+                Figure below shows
+                Bezier curves with three, four and five control points having a degree of polynomial two, three and
+                four,
+                respectively.</h3>
+            <div class="image"><img src="images\theory1.jpg" height="200px" width="700px" alt="theory image 1"></div>
+        </div>
+        <h2 style="text-decoration: underline ; text-underline-offset: 0.6rem; color:  #ffc000">Properties of Bezier
+            Curves: </h2>
+
+        <div class="content">
+            <h3>▶ They generally follow the shape of the control polygon, which consists of the segments joining the
+                control points.</h3>
+
+            <h3>▶ They always pass through the first and last control points.</h3>
+            <h3>
+                ▶ Degree of the curve is one less than a number of control points Always interpolates first and last
+                control
+                points and
+                approximates remaining two.
+            </h3>
+            <h3>▶ The direction of the tangent vector at the end points is same as that of the vector determined by
+                first and last
+                segments.</h3>
+            <h3>
+                ▶ The slope of the derivative at the beginning is along the line joining the first two points and slope
+                of
+                the
+                derivative
+                at the end is along the line joining last two points. Bezier curve always satisfies the convex hull
+                property.
+            </h3>
+            <h3>▶ Bezier curves exhibit global control means moving a control point alters the shape of the whole curve.
+            </h3>
+            <h3>
+                ▶ At any parameter value t, sum all four Bezier blending function is always 1, i...
+            </h3>
+
+
+            <div class="image"><img src="images\theory2.jpg" height="100px" width="300px" alt="theory image 2"></div>
+
+
+            <h3>
+                ▶ Polynomial smoothly follows the control points without much oscillation. Bezier curves do not have
+                local
+                control;
+                repositioning one control point changes the entire curve.
+            </h3>
+            <h3>
+                ▶ The curve is invariant under affine transformation.
+            </h3>
+            <h3>
+                ▶ The basis functions are real.
+            </h3>
+            <h3>
+                ▶ The curve exhibits variation diminishing property, i.e. any line intersects the Bezier curve at most
+                as
+                often as that
+                line intersects the polygon interpolating control points.
+            </h3>
+            <h3>
+                ▶ ezier curve can fit any number of control points.
+            </h3>
+            <h3>
+                ▶ Reversing the order of control points yield the same Bezier curve.
+            </h3>
+            <h3>
+                ▶ Applications of Bezier Curves
+
+                Bezier curve is used in many design applications. Bezier curves are used to model shapes and surfaces
+                of
+                automobiles,
+                engineering, architectures, and aeronautics objects. Few of the applications are listed where the Bezier
+                curve is being
+                used to model the shapes.
+            </h3>
+            <div style="margin-left: 30px;">
+                <h3>
+                    ▷ Computer graphics
+                </h3>
+                <h3>
+                    ▷ Engineering design
+                </h3>
+                <h3>
+                    ▷ Computer animation
+                </h3>
+                <h3>
+                    ▷ Modelling
+                </h3>
+                <h3>
+                    ▷ CAD packages
+                </h3>
+                <h3>
+                    ▷ Graphics packages like photoshop
+                </h3>
+            </div>
+        </div>
+        <h2 style="text-decoration: underline ; text-underline-offset: 0.6rem; color:  #ffc000"> Cubic Bezier Curves:
+        </h2>
+
+        <div class="content">
+            <h3>
+                ▶ Cubic Bezier curve is important to discuss. Cubic Bezier curves are the bridge between computation
+                cost
+                and
+
+                smoothness.
+
+                They are very much flexible and estimate shape nicely. We should specify four control points to generate
+                a
+
+                cubicBezier curve.
+
+                Blending functions for cubic Bezier curve is derived by putting n = 3 in the equation of Bezier curve,
+            </h3>
+
+            <div class="image"><img src="images\theory3.jpg" height="300px" width="400px" alt="theory image 3"></div>
+
+            <h3>
+                ▶ Figure below shows the plot of blending functions over parameter range 0 ≤ t ≤ 1. For t = 0, only
+                first
+                blending
+
+                function is non zero and it has value 1. And at t = 1, only last blending function is non zero and its
+                value
+                is 1.
+            </h3>
+
+            <div class="image"><img src="images\theory4.jpg" height="300px" width="650px" alt="theory image 4"></div>
+
+            <h3>
+                ▶ Thus Bezier curve always interpolates endpoints. For the rest of the values of t, all blending
+                functions
+
+                contribute to the shape of the curve. Blending functions BEZ <sub>1,3</sub> and BEZ <sub>2,3</sub> are
+                maximum at t = 1/3 and t = 2/3
+                respectively.
+            </h3>
+            <h3>
+                ▶ At any value of t, the
+                summation of Bezier blending function is always 1.
+            </h3>
+
+
+            <h2 style="text-decoration: underline ; text-underline-offset: 0.6rem; color:  #ffc000"> Matrix
+                Representation: </h2>
+
+
+            <h3> ▶ We can derive a matrix representation of a cubic Bezier Curve using blendoing function representation
+                as
+                below : </h3>
+
+            <div class="image"><img src="images\theory5.jpg" height="300px" width="800px" alt="theory image 5"></div>
+
+
+            <h3 align="center">Thus,</h3>
+
+            <div class="image"><img src="images\theory6.jpg" height="300px" width="800px" alt="theory image 6"></div>
+
+
+            <h2 style="text-decoration: underline ; text-underline-offset: 0.6rem; color:  #ffc000"> Limitations of
+                the
+                Bezier Curve: </h2>
+            <h3>
+                ▶ Bezier curve approximates the control points so it cannot be used in the applications which require
+                interpolating curve.
+            </h3>
+            <h3>
+                ▶ Bezier curve does not have local control i.e. changing the position of one control point influences
+                the
+                entire curve.
+            </h3>
+            <h3>
+                ▶ Degree of the curve depends on a number of the control point i.e. adding more control points increases
+                the
+                smoothness of
+                the curve at the cost of processing higher degree polynomials.
+            </h3>
+        </div>
+
+        <div class="content">
+            <h2 style="text-decoration: underline ; text-underline-offset: 0.6rem; color:  #ffc000">Subdivision Method
+            </h2>
+
+            <h3>
+                ▶ Another method to generate a Bezier curve is by 'Subdivision Method'. This method generates a Bezier
+                Curve by
+                midpoint calculations. Let us derive the Bezier curve defined by control points P<sub>1</sub>,
+                P<sub>2</sub>, P<sub>3</sub> and P<sub>4</sub>.
+            </h3>
+            <h3>
+                ▶ Join consecutive control points using straight lines. Suppose midpoint of lines joining points P
+                <sub>1</sub>P<sub>2</sub> , P<sub>2</sub>P<sub>3</sub> and P<sub>3</sub>P<sub>4</sub>are L<sub>2</sub>,H
+                and R<sub>3</sub>, respectively. Naming conventions
+                are chosen to simplify the understanding of
+                computation.
+            </h3>
+            <div class="image"><img src="images\theory7.jpg" height="300px" width="400px" alt="theory image 7"></div>
+
+
+            <h3>
+                ▶ Join points L<sub>2</sub> and H and name its midpoint L<sub>3</sub>. Similarly, join points H and
+                R<sub>3</sub>, and name its midpoint R<sub>2</sub>
+                Join points L<sub>3</sub> and R<sub>2</sub>, and assign label L<sub>4</sub> to its midpoint
+                (L<sub>4</sub> = R<sub>1</sub>)
+            </h3>
+            <h3>
+                ▶ Recursively draw two Bezier curve segments between control points (L<sub>1</sub>, L<sub>2</sub>,
+                L<sub>3</sub>, L<sub>4</sub>) and (R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>)
+                respectively.
+                Both these
+                curve segments are independent Bezier curves.
+            </h3>
+            <h3>
+                ▶ Numbers of recursive calls decide the smoothness of the curve. We can derive the matrix representation
+                for
+                this
+                subdivision as follows.
+            </h3>
+            <h3>
+                From figure above we can write,
+            </h3>
+            <div class="image"><img src="images\theory8.jpg" height="800px" width="600px" alt="theory image 7"></div>
+
+        </div>
+    </div>
+
+
+
+    <h2 style="text-decoration: underline ; text-underline-offset: 0.6rem; color:#ffc000"> Click the button below to
+        go to the simulation or to the demonstration page of Bezier Curve:
+    </h2>
+
+
+
+
+
+    <div class="align">
+        <h1 style=" color: #00ffff">
+            <button class="btn" style="border-radius: 10px; background-color:#D8D9CF;"><a href="bez.html" class="under">
+                    <h3 style="color:black">Animation Page</h3>
+                </a></button>
+        </h1>
+    </div>
+</body>
+
+</html>
+
+
+
+
+▷

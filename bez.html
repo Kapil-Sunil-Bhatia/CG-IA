@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bezier Curve Generation</title>
+
+    <link rel="shortcut icon" href="images\bezier-modified.png">
+    <!--- JQuery --->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.onload = (event) => {
+            $.get("nav.html", function (data) {
+                $("#nav-container").replaceWith(data);
+            });
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+
+    <style>
+        body {
+            background-color:#3C4048;
+
+        }
+
+        canvas {
+
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-decoration: underline ; text-underline-offset: 0.6rem; color:floralwhite" align="center"> BEZIER
+        CURVE GENERATOR. EXPLORE YOURSELF IN IT.</h2>
+    <h2 style="color:floralwhite">⚪ Click any where on the white part of the screen to choose a cotrol point. you can
+        choose maximum 20 control points and
+        after that you can move the points by dragging</h2>
+    <div id="nav-container"></div>
+</body>
+
+</html>

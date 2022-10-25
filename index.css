@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color:#3C4048;
+}
+
+.theory {
+  color: #00ffff;
+}
+h1 {
+ color:  #ffc000;
+  text-align: center;
+}
+h3 {
+  color: #00ffff;
+  margin-left: 10px;
+}
+.under {
+  color:  #00ffff;
+  text-decoration: none;
+}
+.btn {
+  width: 200px;
+  border: none;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+
+  height: 50px;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+    margin-left: 15px;
+}
+.image{
+  border-radius: 10px;
+}
+
